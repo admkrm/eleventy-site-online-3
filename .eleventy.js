@@ -12,7 +12,7 @@ module.exports = function(eleventyConfig) {
       "liquid"
     ],
 
-    pathPrefix: "/",
+
 
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
@@ -27,3 +27,5 @@ module.exports = function(eleventyConfig) {
   };
 
 };
+
+// pathPrefix: "/",
