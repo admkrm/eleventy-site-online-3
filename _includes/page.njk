@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/css/reset_plus.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+		<script src="{{ '/js/script.js' | url }}" defer></script>
+    <title>{{ metadata.title }} | {{ title }}</title>
+  </head>
+  <body>
+		<header>
+					<h1>My site</h1>
+			    <nav>
+						<ul>
+			      {%- for nav in collections.nav -%}
+			      	<li class="{% if nav.url == page.url %}active{% endif %}">
+			        	<a href="{{ nav.url | url }}">{{ nav.data.title }}</a>
+			       </li>
+			      {%- endfor -%}
+						</ul>
+			    </nav>
+		</header>
+		<main>
+					{{ content | safe }}
+		</main>
+		<footer>
+					<p>This site was made with love in Antwerp 2019</p>
+		</footer>
+  </body>
+</html>
